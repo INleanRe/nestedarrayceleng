@@ -432,7 +432,8 @@ const ppl = [
 // 1) display/print person yang registered dibawah tahun 2022
 for(i=0; i<ppl.length; i++){
   let check = ppl[i].registered.split("-")
-  if(check[0] < 2022){
+  // console.log(check)
+  if(check[0] < 2021){
     // console.log(ppl[i].name +" "+ ppl[i].registered)
   }
 }
@@ -508,12 +509,13 @@ for(i=0; i<ppl.length; i++){
   }
 }
 // 10) display person yang mempunya friends gender male atau favorite fruit nya banana dan registered di tahun 2023
-for(i=0; i<ppl.length; i++){
-  for(j=0; j<ppl[i].friends.length; j++){
-  let check = ppl[i].registered.split("-")
-  check.push(ppl[i])
-    if(ppl[i].check[0 < 2023]){
-      console.log(ppl[i].name)
+for (i=0; i<ppl.length; i++){
+  let reg = ppl[i].registered.split("-")
+  if(reg[0] <= 2021){
+    for(j=0; j<ppl[i].friends.length; j++){
+      if(ppl[i].friends[j].favoriteFruit === "banana" || ppl[i].friends[j].gender === "male"){
+        console.log(ppl[i].name + " " + "friend with "+ ppl[i].friends[j].name +" fav fruit " + ppl[i].friends[j].favoriteFruit)
+      }
     }
-  }
+  }  
 }
