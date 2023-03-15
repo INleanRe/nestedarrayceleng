@@ -488,12 +488,20 @@ for(i=0; i<ppl.length; i++){
   for(j=0; j<ppl[i].friends.length; j++){
     for(k=0; k<ppl[i].friends[j].hobby.length; k++){
       if(ppl[i].friends[j].hobby[k].id === 1 && ppl[i].friends[j].isActive === true){
-        console.log(ppl[i].friends[j].name +" "+ ppl[i].friends[j].hobby[k].hobby)
+        // console.log(ppl[i].friends[j].name +" "+ ppl[i].friends[j].hobby[k].hobby)
       }
     }
   }
 }
 // 9) display person yang eye color nya brown dan favorite fruit nya banana dan mempunyai teman hobby basketball
-
+for(i=0; i<ppl.length; i++){
+  for(j=0; j<ppl[i].friends.length; j++){
+    for(k=0; k<ppl[i].friends[j].hobby.length; k++){
+      if(ppl[i].eyeColor === "brown" && ppl[i].friends[j].favoriteFruit === "banana" && ppl[i].friends[j].hobby[k].hobby === "basketball"){
+        console.log(ppl[i].name + " friend :" + ppl[i].friends[j].name + " with hobby :" + ppl[i].friends[j].hobby[k].hobby)
+      }
+    }
+  }
+}
 // 10) display person yang mempunya friends gender male atau favorite fruit nya banana dan registered di tahun 2023
 
